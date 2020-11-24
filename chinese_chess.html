@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: '標楷體';
+            background: rgb(100, 251, 221);
+            background: linear-gradient(16deg, rgba(100, 251, 221, 1) 0%, rgba(178, 190, 255, 1) 100%);
+        }
+
+
+        .all {
+            position: relative;
+            margin: 2% auto;
+            width: 1100px;
+            height: 1000px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 3.1rem;
+            writing-mode: vertical-lr;
+            margin: 0 2%;
+        }
+
+        .container {
+            width: 900px;
+            height: 1000px;
+            background: url('https://www.toptal.com/designers/subtlepatterns/patterns/wood_pattern.png');
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 6px 6px 8.5px rgba(0, 0, 0, .35);
+
+        }
+
+        
+        table {
+            position: relative;
+            border: 3px solid black;
+            width: 800px;
+            height: 900px;
+            border-collapse: collapse;
+        }
+        
+
+        tr {}
+
+        td {
+            position: relative;
+            border: 3px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+        .boundary {
+            font-size: 4rem;
+            text-align: center;
+
+        }
+
+        .linLuRd {
+            width: 3px;
+            height: 288px;
+            background: black;
+            transform-origin: top left;
+            transform: rotate(-43.7deg);
+        }
+
+        .linRuLd {
+            width: 3px;
+            height: 288px;
+            background: black;
+            transform-origin: top right;
+            transform: rotate(44deg);
+        }
+
+        .lineP1 {
+            position: absolute;
+            top: 3%;
+            left: 40.8%;
+        }
+
+        .lineP2 {
+            position: absolute;
+            top: 3%;
+            left: 59%;
+        }
+
+        .lineP3 {
+            position: absolute;
+            top: 76.5%;
+            left: 40.8%;
+        }
+
+        .lineP4 {
+            position: absolute;
+            top: 76.5%;
+            left: 59%;
+        }
+
+        .chessRow1 {
+            position: absolute;
+            top: .5%;
+            left: 10.5%;
+            display: flex;
+            justify-content: row;
+            justify-content: space-between;
+            width: 865px;
+        }
+
+        .chessRow2 {
+            position: absolute;
+            top: 20.5%;
+            left: 19.7%;
+            display: flex;
+            justify-content: row;
+            justify-content: space-between;
+            width: 665px;
+        }
+
+        .chessRow3 {
+            position: absolute;
+            top: 30.5%;
+            left: 10.7%;
+            display: flex;
+            justify-content: row;
+            justify-content: space-between;
+            width: 865px;
+        }
+
+        .chessRow4 {
+            position: absolute;
+            top: 61.5%;
+            left: 10.5%;
+            display: flex;
+            justify-content: row;
+            justify-content: space-between;
+            width: 865px;
+        }
+
+        .chessRow5 {
+            position: absolute;
+            top: 72%;
+            left: 19.5%;
+            display: flex;
+            justify-content: row;
+            justify-content: space-between;
+            width: 665px;
+        }
+
+        .chessRow6 {
+            position: absolute;
+            top: 92.5%;
+            left: 10.5%;
+            display: flex;
+            justify-content: row;
+            justify-content: space-between;
+            width: 865px;
+        }
+
+        .chess {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 1px solid black;
+            background: url('https://www.toptal.com/designers/subtlepatterns/patterns/tileable_wood_texture.png');
+            font-size: 3rem;
+            box-shadow: 3px 3px 3.5px rgba(0, 0, 0, .3);
+        }
+
+
+
+        .red {
+            color: red;
+        }
+
+        .black .chess::before {
+            content: '';
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+
+        .red .chess::before {
+            content: '';
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 1px solid red;
+        }
+
+        .Rb {
+            bottom: 8px;
+            right: 8px;
+            border-top: 0;
+            border-right: 3px;
+            border-bottom: 3px;
+            border-left: 0;
+            position: absolute;
+            border-style: solid;
+            border-color: black;
+            width: 25px;
+            height: 25px;
+        }
+
+        .Lb {
+            bottom: 8px;
+            left: 8px;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 3px;
+            border-left: 3px;
+            position: absolute;
+            border-style: solid;
+            border-color: black;
+            width: 25px;
+            height: 25px;
+        }
+
+        .Rt {
+            top: 8px;
+            right: 8px;
+            border-top: 3px;
+            border-right: 3px;
+            border-bottom: 0;
+            border-left: 0;
+            position: absolute;
+            border-style: solid;
+            border-color: black;
+            width: 25px;
+            height: 25px;
+        }
+
+        .Lt {
+            top: 8px;
+            left: 8px;
+            border-top: 3px;
+            border-right: 0;
+            border-bottom: 0;
+            border-left: 3px;
+            position: absolute;
+            border-style: solid;
+            border-color: black;
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <p>棋盤裡，車無倫，馬無韁，叫聲將軍提防提防</p>
+        <div class="container">
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><div class="Rb"></div></td>
+                    <td><div class="Lb"></div></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><div class="Rb"></div></td>
+                    <td><div class="Lb"></div></td>
+                </tr>
+                <tr>
+                    <td><div class="Rt"></div><div class="Lb"></div></td>
+                    <td><div class="Lt"></div><div class="Rb"></div></td>
+                    <td><div class="Lb"></div></td>
+                    <td><div class="Rb"></div></td>
+                    <td><div class="Lb"></div></td>
+                    <td><div class="Rb"></div></td>
+                    <td><div class="Rt"></div><div class="Lb"></div></td>
+                    <td><div class="Lt"></div><div class="Rb"></div></td>
+                </tr>
+                <tr>
+                    <td><div class="Lt"></div></td>
+                    <td><div class="Rt"></div></td>
+                    <td><div class="Lt"></div></td>
+                    <td><div class="Rt"></div></td>
+                    <td><div class="Lt"></div></td>
+                    <td><div class="Rt"></div></td>
+                    <td><div class="Lt"></div></td>
+                    <td><div class="Rt"></div></td>
+                </tr>
+                <tr>
+                    <td colspan="8">
+                        <div class="boundary">楚河&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;漢界</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><div class="Lb"></div></td>
+                    <td><div class="Rb"></div></td>
+                    <td><div class="Lb"></div></td>
+                    <td><div class="Rb"></div></td>
+                    <td><div class="Lb"></div></td>
+                    <td><div class="Rb"></div></td>
+                    <td><div class="Lb"></div></td>
+                    <td><div class="Rb"></div></td>
+                </tr>
+                <tr>
+                    <td><div class="Lt"></div><div class="Rb"></div></td>
+                    <td><div class="Rt"></div><div class="Lb"></div></td>
+                    <td><div class="Lt"></div></td>
+                    <td><div class="Rt"></div></td>
+                    <td><div class="Lt"></div></td>
+                    <td><div class="Rt"></div></td>
+                    <td><div class="Lt"></div><div class="Rb"></div></td>
+                    <td><div class="Rt"></div><div class="Lb"></div></td>
+                </tr>
+                <tr>
+                    <td><div class="Rt"></div></td>
+                    <td><div class="Lt"></div></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><div class="Rt"></div></td>
+                    <td><div class="Lt"></div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="linLuRd lineP1"></div>
+            <div class="linRuLd lineP2"></div>
+            <div class="linLuRd lineP3"></div>
+            <div class="linRuLd lineP4"></div>
+            <div class="chessRow1 black">
+                <div class="chess">車</div>
+                <div class="chess">馬</div>
+                <div class="chess">象</div>
+                <div class="chess">士</div>
+                <div class="chess">將</div>
+                <div class="chess">士</div>
+                <div class="chess">象</div>
+                <div class="chess">馬</div>
+                <div class="chess">車</div>
+            </div>
+            <div class="chessRow2 black">
+                <div class="chess">包</div>
+                <div class="chess">包</div>
+            </div>
+            <div class="chessRow3 black">
+                <div class="chess">卒</div>
+                <div class="chess">卒</div>
+                <div class="chess">卒</div>
+                <div class="chess">卒</div>
+                <div class="chess">卒</div>
+            </div>
+            <div class="chessRow4 red">
+                <div class="chess">兵</div>
+                <div class="chess">兵</div>
+                <div class="chess">兵</div>
+                <div class="chess">兵</div>
+                <div class="chess">兵</div>
+            </div>
+            <div class="chessRow5 red">
+                <div class="chess">炮</div>
+                <div class="chess">炮</div>
+            </div>
+            <div class="chessRow6 red">
+                <div class="chess">俥</div>
+                <div class="chess">傌</div>
+                <div class="chess">相</div>
+                <div class="chess">仕</div>
+                <div class="chess">帥</div>
+                <div class="chess">仕</div>
+                <div class="chess">相</div>
+                <div class="chess">傌</div>
+                <div class="chess">俥</div>
+            </div>
+        </div>
+        <p>圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</p>
+    </div>
+</body>
+
+</html>
